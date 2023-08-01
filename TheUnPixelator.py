@@ -5,10 +5,8 @@ import pickle
 
 def readPxls(img):
     pixels = img.load()
-
     width, height = img.size
     rgb_values = []
-
     for i in range(width):
         for j in range(height):
             rgb_values.append(pixels[j,i])
