@@ -17,10 +17,10 @@ def readPxls(img):
     return rgb_values
     img.close()
 
-myimg = Image.open("/home/yc/Desktop/NEW_DIGZ/ThePixelator/Colours.png")
+myimg = Image.open("/ThePixelator/Colours.png")
 rgbArray = readPxls(myimg)
 
-with open ("/home/yc/Desktop/NEW_DIGZ/ThePixelator/colourSeed.csv", 'rb') as f:
+with open ("/ThePixelator/colourSeed.csv", 'rb') as f:
     colourSeed = pickle.load(f)
     f.close()
 
