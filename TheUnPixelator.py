@@ -1,8 +1,6 @@
 import base64
 from pathlib import Path
-from random import choices
 from PIL import Image
-import math
 import pickle
 
 def readPxls(img):
