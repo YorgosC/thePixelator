@@ -37,10 +37,7 @@ def decodeKey(rgb_values, seed, charset):
     return b64_string
 
 b64_string = decodeKey(rgbArray, colourSeed, b64_charset)
-characters_to_remove = "+"
-
-for char in characters_to_remove:
-    b64_string = b64_string.replace(char, "")
+b64_string = b64_string.replace("+", "")
 
 decoded_bytes = base64.b64decode(b64_string)
 decoded_string = decoded_bytes.decode('ascii')
