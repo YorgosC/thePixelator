@@ -33,7 +33,6 @@ def decodeKey(rgb_values, seed, charset):
         for key, value in seed_dict.items():
             if rgb == value:
                 b64_string += charset[key]
-                break
     return b64_string
 
 b64_string = decodeKey(rgbArray, colourSeed, b64_charset)
