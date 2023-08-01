@@ -1,5 +1,5 @@
 # thePixelator
-custom_pixel_obfuscation
+script-to-b64-to-pixel obfuscator and de-obfuscator script
 
 What it says on the tin.
 Really new to this coding scene and I have been watching a lot of John Hammond on YouTube. Always trying to de-obfuscate some endless procession of b64 strings from hell. Plus, I understand it's been getting a lot harder to sneak anything b64 decode/encode past modern malware protection.
