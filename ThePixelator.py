@@ -19,10 +19,10 @@ def create_image(rgb_values, width, height):
     for i in range(width):
         for j in range(height):
             pixels[j,i] = rgb_values[j+(i*width)]
-    img.save("/home/yc/Desktop/NEW_DIGZ/ThePixelator/Colours.png")
+    img.save("/ThePixelator/Colours.png")
     img.close()
 
-txt = open("/home/yc/Desktop/NEW_DIGZ/ThePixelator/ShakespeareSample.txt", "r", encoding="utf-8").read()
+txt = open("/ThePixelator/ShakespeareSample.txt", "r", encoding="utf-8").read()
 txt_bytes = txt.encode('ascii')
 base64_bytes = base64.b64encode(txt_bytes)
 base64_txt = base64_bytes.decode('ascii')
