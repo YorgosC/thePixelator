@@ -33,6 +33,7 @@ for i in range(0, size_dif):
     base64_txt += '+'
 
 obfArray = makeRGBArray()
+obf_dict = {index: value for index, value in enumerate(obfArray)}
 colourArray = []
 for char in base64_txt:
     if char == 'a':
