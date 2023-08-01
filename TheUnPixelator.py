@@ -36,9 +36,8 @@ def decodeKey(rgb_values, seed, charset):
                 break
     return b64_string
 
-testStr = decodeKey(rgbArray, colourSeed, b64_charset)
+b64_string = decodeKey(rgbArray, colourSeed, b64_charset)
 characters_to_remove = "+"
-b64_string = testStr
 for char in characters_to_remove:
     b64_string = b64_string.replace(char, "")
 
