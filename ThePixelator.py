@@ -32,6 +32,8 @@ size_dif = (math.ceil(math.sqrt(len(base64_txt)))*math.ceil(math.sqrt(len(base64
 for i in range(0, size_dif):
     base64_txt += '+'
 
+b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+'
+
 obfArray = makeRGBArray()
 obf_dict = {index: value for index, value in enumerate(obfArray)}
 colourArray = []
