@@ -27,7 +27,6 @@ txt_bytes = txt.encode('ascii')
 base64_bytes = base64.b64encode(txt_bytes)
 base64_txt = base64_bytes.decode('ascii')
 
-
 size_dif = (math.ceil(math.sqrt(len(base64_txt)))*math.ceil(math.sqrt(len(base64_txt))))-len(base64_txt)
 for i in range(0, size_dif):
     base64_txt += '+'
@@ -45,6 +44,5 @@ for char in base64_txt:
 with open("colourSeed.csv", 'wb') as g:
     pickle.dump(obfArray, g)
     g.close()
-
 
 result_image = createImage(colourArray, math.ceil(math.sqrt(len(colourArray))), math.ceil(math.sqrt(len(colourArray))))
