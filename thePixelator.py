@@ -45,4 +45,4 @@ with open("colourSeed.csv", 'wb') as g:
     pickle.dump(obf_Array, g)
     g.close()
 
-result_image = createImage(colour_Array, math.ceil(math.sqrt(len(colour_Array))), math.ceil(math.sqrt(len(colourArray))))
+result_image = createImage(colour_Array, math.ceil(math.sqrt(len(colour_Array))), math.ceil(math.sqrt(len(colour_Array))))
