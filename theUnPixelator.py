@@ -13,11 +13,11 @@ def readPxls(img):
     return rgb_values
     img.close()
 
-myimg = Image.open("/ThePixelator/Colours.png")
-rgbArray = readPxls(myimg)
+my_img = Image.open("/ThePixelator/Colours.png")
+rgb_array = readPxls(my_img)
 
 with open ("/ThePixelator/colourSeed.csv", 'rb') as f:
-    colourSeed = pickle.load(f)
+    colour_seed = pickle.load(f)
     f.close()
 
 b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+'
@@ -31,7 +31,7 @@ def decodeKey(rgb_values, seed, charset):
                 b64_string += charset[key]
     return b64_string
 
-b64_string = decodeKey(rgbArray, colourSeed, b64_charset)
+b64_string = decodeKey(rgb_array, colour_seed, b64_charset)
 b64_string = b64_string.replace("+", "")
 
 decoded_bytes = base64.b64decode(b64_string)
