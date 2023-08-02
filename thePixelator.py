@@ -13,7 +13,7 @@ def makeRGBArray():
         obfArray.append(my_ints)
     return obfArray
 
-def create_image(rgb_values, width, height):
+def createImage(rgb_values, width, height):
     img = Image.new('RGB', (width, height), color = 'white')
     pixels = img.load()
     for i in range(width):
