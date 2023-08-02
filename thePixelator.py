@@ -47,4 +47,4 @@ with open("colourSeed.csv", 'wb') as g:
     g.close()
 
 
-result_image = create_image(colourArray, math.ceil(math.sqrt(len(colourArray))), math.ceil(math.sqrt(len(colourArray))))
+result_image = createImage(colourArray, math.ceil(math.sqrt(len(colourArray))), math.ceil(math.sqrt(len(colourArray))))
