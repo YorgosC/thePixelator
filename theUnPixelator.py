@@ -20,7 +20,7 @@ with open ("/ThePixelator/colourSeed.csv", 'rb') as f:
     colour_seed = pickle.load(f)
     f.close()
 
-b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+'
+b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+$'
 
 def decodeKey(rgb_values, seed, charset):
     b64_string = ''
@@ -32,7 +32,7 @@ def decodeKey(rgb_values, seed, charset):
     return b64_string
 
 b64_string = decodeKey(rgb_array, colour_seed, b64_charset)
-b64_string = b64_string.replace("+", "")
+b64_string = b64_string.replace("$", "")
 
 decoded_bytes = base64.b64decode(b64_string)
 decoded_string = decoded_bytes.decode('ascii')
