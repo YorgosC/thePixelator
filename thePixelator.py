@@ -29,9 +29,9 @@ base64_txt = base64_bytes.decode('ascii')
 
 size_dif = (math.ceil(math.sqrt(len(base64_txt)))*math.ceil(math.sqrt(len(base64_txt))))-len(base64_txt)
 for i in range(0, size_dif):
-    base64_txt += '+'
+    base64_txt += '$'
     
-b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+'
+b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+$'
 charset_dict = {index: value for index, value in enumerate(b64_charset)}
 
 obf_Array = makeRGBArray()
