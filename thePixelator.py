@@ -6,12 +6,12 @@ import math
 import pickle
 
 def makeRGBArray():
-    obf_Array = []
+    obf_array = []
     for i in range(0,65):
         colour = choices(range(0,255)), choices(range(0,255)), choices(range(0,255))
         my_ints = tuple(int(l[0]) for l in colour)
-        obf_Array.append(my_ints)
-    return obf_Array
+        obf_array.append(my_ints)
+    return obf_array
 
 def createImage(rgb_values, width, height):
     img = Image.new('RGB', (width, height), color = 'white')
@@ -34,15 +34,15 @@ for i in range(0, size_dif):
 b64_charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/=+$'
 charset_dict = {index: value for index, value in enumerate(b64_charset)}
 
-obf_Array = makeRGBArray()
-colour_Array = []
+obf_array = makeRGBArray()
+colour_array = []
 for char in base64_txt:
     for key, value in charset_dict.items():
         if char == value:
-            colour_Array.append(tuple(obf_Array[key]))
+            colour_array.append(tuple(obf_array[key]))
       
 with open("colourSeed.csv", 'wb') as g:
-    pickle.dump(obf_Array, g)
+    pickle.dump(obf_array, g)
     g.close()
 
-result_image = createImage(colour_Array, math.ceil(math.sqrt(len(colour_Array))), math.ceil(math.sqrt(len(colour_Array))))
+result_image = createImage(colour_array, math.ceil(math.sqrt(len(colour_array))), math.ceil(math.sqrt(len(colour_array))))
