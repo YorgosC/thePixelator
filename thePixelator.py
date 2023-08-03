@@ -7,7 +7,7 @@ import pickle
 
 def makeRGBArray():
     obf_array = []
-    for i in range(0,65):
+    for i in range(0,66):
         colour = choices(range(0,255)), choices(range(0,255)), choices(range(0,255))
         my_ints = tuple(int(l[0]) for l in colour)
         obf_array.append(my_ints)
