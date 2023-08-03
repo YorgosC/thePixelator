@@ -10,8 +10,8 @@ def readPxls(img):
     for i in range(width):
         for j in range(height):
             rgb_values.append(pixels[j,i])
-    return rgb_values
     img.close()
+    return rgb_values
 
 my_img = Image.open("/ThePixelator/Colours.png")
 rgb_array = readPxls(my_img)
